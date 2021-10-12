@@ -8,8 +8,16 @@ numpy
 ``` pip install numpy ```
 ## Methodology
 - Capture the video frame:
-- Hand Segmentation: Convert the frame from BGR to Gray
-- Apply Gaussian Blur
+
+Capture the video from camera using 
+
+  ```cap = cv2.VideoCapture(0)```
+- Hand Segmentation: 
+
+Convert the frame from RGB to Grayscale
+
+  ```gray = cv2.cvtColor(crop_img,cv2.COLOR_RGB2GRAY)```
+- Apply Gaussian Blur to smooth the image.
 - Apply thresholding to frame.
 
     ![Screenshot from 2021-10-11 17-35-04](https://user-images.githubusercontent.com/85958512/136789989-e232fd76-4c27-47e4-ab08-710117c34e54.png)
